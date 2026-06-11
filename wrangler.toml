@@ -5,4 +5,4 @@ compatibility_date = "2026-06-11"
 [[d1_databases]]
 binding = "DB"
 database_name = "crud-app-db"
-database_id = "replace-with-your-d1-database-id"
+database_id = "592d37d2-3f69-4a64-81dd-47200bc8a744"
