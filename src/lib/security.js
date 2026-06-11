@@ -13,11 +13,7 @@ export function validateEmployeeInput(payload) {
     errors.push('name is required and must be 1-80 characters');
   }
 
-  if (
-    typeof email !== 'string' ||
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
-    email.length > 120
-  ) {
+  if (!isValidEmail(email)) {
     errors.push('email must be a valid email address');
   }
 
@@ -32,6 +28,16 @@ export function validateEmployeeInput(payload) {
   }
 
   return errors;
+}
+
+function isValidEmail(email) {
+  if (typeof email !== 'string' || email.length > 120) return false;
+  if (email.includes(' ') || !email.includes('@')) return false;
+  const atIndex = email.indexOf('@');
+  if (atIndex <= 0 || atIndex === email.length - 1) return false;
+  const domain = email.slice(atIndex + 1);
+  if (domain.startsWith('.') || domain.endsWith('.') || !domain.includes('.')) return false;
+  return true;
 }
 
 export async function createToken(payload, secret) {
