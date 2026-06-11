@@ -1,0 +1,26 @@
+{
+  "name": "crud-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartasscoder/crud-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/smartasscoder/crud-app/issues"
+  },
+  "homepage": "https://github.com/smartasscoder/crud-app#readme",
+  "devDependencies": {
+    "wrangler": "^4.99.0"
+  }
+}
